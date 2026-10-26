@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dilara Nevin Arican | Engineering Honors Portfolio</title>
+<style>
+:root {
+  --navy: #17365d;
+  --blue: #315b83;
+  --ink: #172435;
+  --muted: #5f6b7a;
+  --paper: #ffffff;
+  --soft: #f3f6f9;
+  --line: #dce4ec;
+  --accent: #dce8f4;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+.skip-link { position: absolute; left: -9999px; top: 8px; z-index: 20; padding: 10px 14px; background: white; color: var(--navy); border: 2px solid var(--navy); border-radius: 8px; }
+.skip-link:focus { left: 12px; }
+a:focus-visible { outline: 3px solid #7aa7d6; outline-offset: 3px; border-radius: 3px; }
+body { margin: 0; font-family: Inter, "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.65; }
+a { color: var(--blue); }
+.nav { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav-inner { max-width: 1120px; margin: auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+.brand { font-weight: 750; color: var(--navy); letter-spacing: -.03em; }
+.nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+.nav-links a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 600; }
+.nav-links a:hover { color: var(--blue); }
+.hero { background: linear-gradient(130deg, #102947 0%, #17365d 55%, #315b83 100%); color: white; padding: 92px 24px 88px; }
+.hero-inner { max-width: 1120px; margin: auto; }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .76rem; font-weight: 700; opacity: .8; }
+h1 { font-size: clamp(2.5rem, 6vw, 4.6rem); letter-spacing: -.055em; line-height: 1.05; max-width: 850px; margin: 18px 0; }
+.hero p { max-width: 680px; font-size: 1.12rem; color: #e4edf7; }
+.meta { margin-top: 26px; font-size: .94rem; color: #d4e2f0; }
+.container { max-width: 1120px; margin: auto; padding: 72px 24px; }
+.section-kicker { color: var(--blue); text-transform: uppercase; letter-spacing: .14em; font-size: .75rem; font-weight: 800; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.04em; color: var(--navy); line-height: 1.15; margin: 8px 0 22px; }
+h3 { color: var(--navy); letter-spacing: -.02em; line-height: 1.25; }
+.lead { font-size: 1.1rem; max-width: 800px; color: #354457; }
+.two-col { display: grid; grid-template-columns: .85fr 1.4fr; gap: 42px; align-items: start; }
+.profile-placeholder { min-height: 310px; border: 1px dashed #aab9c9; background: linear-gradient(145deg, #f3f6f9, #e6edf4); border-radius: 18px; display: grid; place-items: center; text-align: center; padding: 24px; color: #53677c; }
+.profile-placeholder strong { display: block; color: var(--navy); font-size: 1.05rem; }
+.profile-symbol { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 22px; background: var(--navy); color: white; font-size: 1.35rem; font-weight: 800; letter-spacing: .04em; }
+.profile-caption { max-width: 260px; margin: 10px auto 0; font-size: .95rem; }
+.about-copy { min-width: 0; }
+.note { color: var(--muted); font-size: .88rem; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+.card { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 8px 28px rgba(20, 44, 70, .045); }
+.card-top { height: 10px; background: var(--navy); }
+.card-body { padding: 24px; }
+.number { color: var(--blue); font-weight: 800; font-size: .78rem; letter-spacing: .12em; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+.tag { border-radius: 999px; background: var(--soft); color: var(--navy); padding: 5px 10px; font-size: .78rem; font-weight: 650; }
+.soft-section { background: var(--soft); }
+.experience { padding: 28px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 230px 1fr; gap: 32px; }
+.experience:first-of-type { border-top: 0; }
+.experience-label { color: var(--blue); font-size: .8rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.competency-callout { border-left: 3px solid var(--blue); padding: 14px 18px; background: #f5f8fb; margin-top: 18px; border-radius: 0 10px 10px 0; }
+.goals { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 28px 0; }
+.goal { border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+.goal-number { font-size: .8rem; font-weight: 800; color: var(--blue); letter-spacing: .12em; }
+.reflection { background: var(--navy); color: white; padding: 30px; border-radius: 18px; }
+.reflection h3 { color: white; margin-top: 0; }
+.reflection p { color: #e4edf7; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; min-width: 700px; background: white; }
+th, td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+th { background: #edf2f7; color: var(--navy); font-size: .86rem; }
+td { font-size: .91rem; }
+tr:last-child td { border-bottom: 0; }
+.rating { display: inline-block; padding: 3px 8px; border-radius: 99px; background: var(--soft); font-size: .8rem; font-weight: 700; white-space: nowrap; }
+footer { background: #102947; color: #d4e2f0; padding: 34px 24px; }
+.footer-inner { max-width: 1120px; margin: auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: .9rem; }
+.small { font-size: .88rem; color: var(--muted); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+@media (max-width: 760px) {
+  .nav-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .nav-links { gap: 14px; }
+  .hero { padding: 66px 22px; }
+  .container { padding: 52px 22px; }
+  .two-col, .experience, .cards, .goals { grid-template-columns: 1fr; }
+  .experience { gap: 10px; }
+  .profile-placeholder { min-height: 210px; }
+  .nav-links a { font-size: .9rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+@media print {
+  .nav { position: static; }
+  .hero { background: var(--navy); print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<nav class="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <div class="brand">ENGINEERING HONORS PORTFOLIO</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experiences">Experiences</a>
+      <a href="#honors">Honors Plan</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">University of Michigan · College of Engineering</div>
+    <h1>Dilara Nevin Arican</h1>
+    <p>A portfolio of the experiences, questions, and ideas shaping my path in mechanical engineering.</p>
+    <div class="meta">Mechanical Engineering · Mathematics Minor · International Minor</div>
+  </div>
+</header>
+
+<main id="main-content">
+<section class="container" id="about">
+  <div class="section-kicker">01 / About</div>
+  <h2>A little about me</h2>
+  <div class="two-col">
+    <div class="profile-placeholder" role="img" aria-label="Design, analysis, and fabrication interests">
+      <div>
+        <span class="profile-symbol" aria-hidden="true">ME</span>
+        <strong>Design · Analysis · Fabrication</strong>
+        <p class="profile-caption">Connecting mathematical ideas with practical engineering solutions.</p>
+      </div>
+    </div>
+    <div class="about-copy">
+      <p class="lead">I was born in Indianapolis, Indiana, and spent 15 years living in Istanbul, Turkey. I am pursuing Mechanical Engineering because I enjoy building things and understanding how they work. I am also pursuing a minor in Mathematics because I am fascinated by how mathematical concepts explain the world around us and can be applied to real-world problems. I enjoy exploring how different ideas connect and using what I learn to approach challenges from different perspectives. Through my coursework and engineering projects, I hope to continue developing my technical skills, exploring new areas of interest, and finding creative ways to solve problems.</p>
+      <div class="tag-list">
+        <span class="tag">Mechanical Engineering</span>
+        <span class="tag">Mathematics</span>
+        <span class="tag">Design &amp; Fabrication</span>
+        <span class="tag">Curiosity</span>
+      </div>
+      <p class="note"> Expected Graduation: May 2028 </p>
+    </div>
+  </div>
+</section>
+
+<section class="soft-section" id="experiences">
+  <div class="container">
+    <div class="section-kicker">02 / Experience</div>
+    <h2>Experiences that shaped how I work</h2>
+    <p class="lead">These experiences have strengthened my adaptability, technical problem-solving, and understanding of how people work together.</p>
+
+    <article class="experience">
+      <div>
+        <div class="experience-label">Experience 01</div>
+        <h3>Learning to live independently</h3>
+        <p class="note">Personal growth</p>
+      </div>
+      <div>
+        <p>Moving away from my family at 17 to pursue my education taught me how to manage life independently and solve problems without relying on someone else to step in. Over time, this experience made me more confident in my ability to handle challenges and figure out a way forward.</p>
+        <div class="competency-callout"><strong>Competency connections:</strong> Grit / Resilience / Persistence; Risk Management; Systems Thinking.<br><span class="note">This experience required me to adapt, assess situations, and work through unfamiliar challenges.</span></div>
+      </div>
+    </article>
+
+    <article class="experience">
+      <div>
+        <div class="experience-label">Experience 02</div>
+        <h3>Studying abroad in Rome and Paris</h3>
+        <p class="note">Cross-cultural learning</p>
+      </div>
+      <div>
+        <p>During two summers abroad, I studied Thermodynamics and International Marketing in Rome, and Calculus III and Photography in Paris. These experiences let me explore different subjects while learning in unfamiliar environments. One memorable moment in Italy happened when my phone died while I was in an unfamiliar location. I had to explain where I wanted to go and what problem I was having to a restaurant owner who did not speak English.</p>
+        <div class="competency-callout"><strong>Competency connections:</strong> Communication; Global / Cultural Awareness; Lifelong Learning.<br><span class="note">Studying and navigating unfamiliar environments encouraged me to adapt my communication and learn from different perspectives.</span></div>
+      </div>
+    </article>
+
+    <article class="experience">
+      <div>
+        <div class="experience-label">Experience 03</div>
+        <h3>Robot Machine Player project</h3>
+        <p class="note">January – May 2026 · Team of five</p>
+      </div>
+      <div>
+        <p>I worked with a team of five to design, build, and validate a multifunctional robotic system. My responsibilities included leading manufacturing and fabrication, performing calculations involving torque, gear ratios, and drivetrain performance, and developing a complete CAD model and engineering drawings in SolidWorks. One of the most challenging parts of the project was coordinating with my teammates and communicating the reasoning behind our design choices. The experience showed me that successful engineering requires both technical knowledge and the ability to work collaboratively.</p>
+        <div class="competency-callout"><strong>Competency connections:</strong> Teamwork; Communication; Systems Thinking; Creativity.<br><span class="note">The project required coordination, clear explanations of design choices, and attention to how components performed as part of a larger system.</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="honors">
+  <div class="section-kicker">03 / Honors Plan</div>
+  <h2>Where I want to grow next</h2>
+  <p class="lead">My Honors Plan connects what I have learned so far with the skills and opportunities I want to pursue next.</p>
+
+  <h3>Competency development</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Competency</th><th>Current proficiency</th><th>Evidence / reflection</th><th>Next step</th></tr></thead>
+      <tbody>
+        <tr><td>Communication</td><td><span class="rating">Proficient</span></td><td>RPM project: explaining design choices and coordinating with teammates.</td><td>Practice explaining technical ideas clearly to different audiences.</td></tr>
+        <tr><td>Creativity</td><td><span class="rating">Proficient</span></td><td>Designing and improving a multifunctional robotic system.</td><td>Explore and compare multiple design solutions before selecting one.</td></tr>
+        <tr><td>Empathy</td><td><span class="rating">Developing</span></td><td>Consider perspectives during teamwork and cross-cultural interactions.</td><td>Listen actively and ask questions to understand others' needs.</td></tr>
+        <tr><td>Entrepreneurial Mindset</td><td><span class="rating">Proficient</span></td><td>Developing practical solutions through engineering projects.</td><td>Consider users, constraints, costs, and the value of a proposed design.</td></tr>
+        <tr><td>Ethics</td><td><span class="rating">Developing</span></td><td>Reflect on the responsibilities that come with technical decisions.</td><td>Consider safety, reliability, resources, and downstream consequences.</td></tr>
+        <tr><td>Global / Cultural Awareness</td><td><span class="rating">Exemplary</span></td><td>Living in Istanbul and studying abroad in Rome and Paris.</td><td>Keep learning from people with different backgrounds and perspectives.</td></tr>
+        <tr><td>Grit / Resilience / Persistence</td><td><span class="rating">Exemplary</span></td><td>Adapting to independence and working through unfamiliar challenges.</td><td>Reflect on setbacks and use what they teach you in future challenges.</td></tr>
+        <tr><td>Leadership</td><td><span class="rating">Proficient</span></td><td>Taking responsibility for manufacturing and fabrication on the robot project.</td><td>Help clarify team responsibilities and take initiative in planning.</td></tr>
+        <tr><td>Lifelong Learning</td><td><span class="rating">Exemplary</span></td><td>Exploring engineering, mathematics, marketing, and photography.</td><td>Explore research areas, technical talks, and topics beyond required courses.</td></tr>
+        <tr><td>Risk Management</td><td><span class="rating">Exemplary</span></td><td>Testing and refining a design to check its performance.</td><td>Identify failure points and safety concerns before building or testing.</td></tr>
+        <tr><td>Systems Thinking</td><td><span class="rating">Proficient</span></td><td>Considering torque, gear ratios, drivetrain performance, and component interactions.</td><td>Trace how changes in one component affect the overall system.</td></tr>
+        <tr><td>Teamwork</td><td><span class="rating">Proficient</span></td><td>Collaborating with a five-person team to build and validate a robotic system.</td><td>Improve coordination, shared decisions, and follow-through.</td></tr>
+      </tbody>
+    </table>
+  </div>
+    <hr>
+  <h3>SMART goals</h3>
+  <div class="goals">
+    <article class="goal">
+      <div class="goal-number">GOAL 01</div>
+      <h3>Explore research opportunities</h3>
+      <p>By the end of this academic year, I will explore research opportunities in Mechanical Engineering by identifying at least three research areas or faculty projects that interest me and reaching out to at least two professors or research groups to learn about potential opportunities. This will help me better understand the different paths available to me and make more informed decisions about my future.</p>
+    </article>
+    <article class="goal">
+      <div class="goal-number">GOAL 02</div>
+      <h3>Maintain strong academic performance</h3>
+      <p>During each semester, I will aim to earn a semester GPA above 3.85 by following a consistent weekly study schedule, staying on top of assignments, and preparing for exams in advance. I will monitor my progress and seek help from professors, GSIs, or academic support resources when I struggle with course material.</p>
+    </article>
+  </div>
+
+  <div class="reflection">
+    <div class="eyebrow">Focus Area Reflection</div>
+    <h3>Staying open while finding direction</h3>
+    <p>At this point in my Mechanical Engineering degree, I am still exploring which area of engineering I want to pursue in the future. I want to use my remaining time at the University of Michigan to learn about different research opportunities and gain a clearer understanding of the career paths available to me. I am also interested in exploring my Mathematics minor further because I enjoy both understanding the ideas behind mathematical concepts and seeing how they can be applied to real-world problems. Through my coursework, project teams, and potential research experiences, I hope to discover which subjects interest me most and how I can combine my interests in mathematics and engineering. My goal is to remain open to different opportunities while continuing to challenge myself academically and maintain a semester GPA above 3.85.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div><strong>Dilara Nevin Arican</strong><br>University of Michigan · Engineering Honors Portfolio</div>
+    <div><a href="https://www.linkedin.com/in/dilara-nevin-arican" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></div>
+  </div>
+</footer>
+</body>
+</html>
