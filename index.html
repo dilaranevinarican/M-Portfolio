@@ -40,7 +40,7 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.04em; color: var(-
 h3 { color: var(--navy); letter-spacing: -.02em; line-height: 1.25; }
 .lead { font-size: 1.1rem; max-width: 800px; color: #354457; }
 .two-col { display: grid; grid-template-columns: .85fr 1.4fr; gap: 42px; align-items: start; }
-.profile-placeholder { min-height: 310px; border: 1px dashed #aab9c9; background: linear-gradient(145deg, #f3f6f9, #e6edf4); border-radius: 18px; display: grid; place-items: center; text-align: center; padding: 24px; color: #53677c; }
+.profile-placeholder {display: block; width: 100%; aspect-ratio: 4 / 5;object-fit: cover; object-position: center 45%; border-radius: 18px; box-shadow: 0 10px 30px rgba(20, 44, 70, .10);}
 .profile-placeholder strong { display: block; color: var(--navy); font-size: 1.05rem; }
 .profile-symbol { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 22px; background: var(--navy); color: white; font-size: 1.35rem; font-weight: 800; letter-spacing: .04em; }
 .profile-caption { max-width: 260px; margin: 10px auto 0; font-size: .95rem; }
@@ -82,7 +82,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
   .container { padding: 52px 22px; }
   .two-col, .experience, .cards, .goals { grid-template-columns: 1fr; }
   .experience { gap: 10px; }
-  .profile-placeholder { min-height: 210px; }
+  .profile-photo { max-width: 420px; }
   .nav-links a { font-size: .9rem; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -122,13 +122,14 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
   <div class="section-kicker">01 / About</div>
   <h2>A little about me</h2>
   <div class="two-col">
-    <div class="profile-placeholder" role="img" aria-label="Design, analysis, and fabrication interests">
-      <div>
-        <span class="profile-symbol" aria-hidden="true">ME</span>
-        <strong>Photo to be updated, I do not have one yet..</strong>
-        <p class="profile-caption">Connecting mathematical ideas with practical engineering solutions.</p>
-      </div>
-    </div>
+    <img
+  class="profile-photo"
+  src="profile-photo.jpg"
+  alt="Dilara standing on a balcony overlooking a European city"
+  width="1000"
+  height="1250"
+  loading="lazy"
+>
     <div class="about-copy">
       <p class="lead">I was born in Indianapolis, Indiana, and spent 15 years living in Istanbul, Turkey. I am pursuing Mechanical Engineering because I enjoy building things and understanding how they work. I am also pursuing a minor in Mathematics because I am fascinated by how mathematical concepts explain the world around us and can be applied to real-world problems. I enjoy exploring how different ideas connect and using what I learn to approach challenges from different perspectives. Through my coursework and engineering projects, I hope to continue developing my technical skills, exploring new areas of interest, and finding creative ways to solve problems.</p>
       <div class="tag-list">
