@@ -40,10 +40,19 @@ h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); letter-spacing: -.04em; color: var(-
 h3 { color: var(--navy); letter-spacing: -.02em; line-height: 1.25; }
 .lead { font-size: 1.1rem; max-width: 800px; color: #354457; }
 .two-col { display: grid; grid-template-columns: .85fr 1.4fr; gap: 42px; align-items: start; }
-.profile-placeholder {display: block; width: 100%; aspect-ratio: 4 / 5;object-fit: cover; object-position: center 45%; border-radius: 18px; box-shadow: 0 10px 30px rgba(20, 44, 70, .10);}
-.profile-placeholder strong { display: block; color: var(--navy); font-size: 1.05rem; }
-.profile-symbol { display: grid; place-items: center; width: 76px; height: 76px; margin: 0 auto 18px; border-radius: 22px; background: var(--navy); color: white; font-size: 1.35rem; font-weight: 800; letter-spacing: .04em; }
-.profile-caption { max-width: 260px; margin: 10px auto 0; font-size: .95rem; }
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 45%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(20, 44, 70, .10);
+  margin: 0 auto;
+}
+
 .about-copy { min-width: 0; }
 .note { color: var(--muted); font-size: .88rem; }
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
@@ -75,6 +84,7 @@ footer { background: #102947; color: #d4e2f0; padding: 34px 24px; }
 .footer-inner { max-width: 1120px; margin: auto; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: .9rem; }
 .small { font-size: .88rem; color: var(--muted); }
 hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
+
 @media (max-width: 760px) {
   .nav-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
   .nav-links { gap: 14px; }
@@ -82,7 +92,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
   .container { padding: 52px 22px; }
   .two-col, .experience, .cards, .goals { grid-template-columns: 1fr; }
   .experience { gap: 10px; }
-  .profile-photo { max-width: 420px; }
+  .profile-photo { max-width: 300px; }
   .nav-links a { font-size: .9rem; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -94,8 +104,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
 }
 </style>
 </head>
+
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
+
 <nav class="nav" aria-label="Main navigation">
   <div class="nav-inner">
     <div class="brand">ENGINEERING HONORS PORTFOLIO</div>
@@ -118,18 +130,20 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
 </header>
 
 <main id="main-content">
+
 <section class="container" id="about">
   <div class="section-kicker">01 / About</div>
   <h2>A little about me</h2>
   <div class="two-col">
     <img
-  class="profile-photo"
-  src="profile-photo.jpg"
-  alt="Dilara standing on a balcony overlooking a European city"
-  width="1000"
-  height="1250"
-  loading="lazy"
->
+      class="profile-photo"
+      src="profile-photo.jpg"
+      alt="Dilara standing on a balcony overlooking a European city"
+      width="1000"
+      height="1250"
+      loading="lazy"
+    >
+
     <div class="about-copy">
       <p class="lead">I was born in Indianapolis, Indiana, and spent 15 years living in Istanbul, Turkey. I am pursuing Mechanical Engineering because I enjoy building things and understanding how they work. I am also pursuing a minor in Mathematics because I am fascinated by how mathematical concepts explain the world around us and can be applied to real-world problems. I enjoy exploring how different ideas connect and using what I learn to approach challenges from different perspectives. Through my coursework and engineering projects, I hope to continue developing my technical skills, exploring new areas of interest, and finding creative ways to solve problems.</p>
       <div class="tag-list">
@@ -138,7 +152,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
         <span class="tag">Design &amp; Fabrication</span>
         <span class="tag">Curiosity</span>
       </div>
-      <p class="note"> Expected Graduation: May 2028 </p>
+      <p class="note">Expected Graduation: May 2028</p>
     </div>
   </div>
 </section>
@@ -157,7 +171,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
       </div>
       <div>
         <p>Moving away from my family at 17 to pursue my education taught me how to manage life independently and solve problems without relying on someone else to step in. Over time, this experience made me more confident in my ability to handle challenges and figure out a way forward.</p>
-        <div class="competency-callout"><strong>Competency connections:</strong> Grit / Resilience / Persistence; Risk Management; Systems Thinking.<br><span class="note">This experience required me to adapt, assess situations, and work through unfamiliar challenges.</span></div>
+        <div class="competency-callout">
+          <strong>Competency connections:</strong> Grit / Resilience / Persistence; Risk Management; Systems Thinking.
+          <br><span class="note">This experience required me to adapt, assess situations, and work through unfamiliar challenges.</span>
+        </div>
       </div>
     </article>
 
@@ -169,7 +186,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
       </div>
       <div>
         <p>During two summers abroad, I studied Thermodynamics and International Marketing in Rome, and Calculus III and Photography in Paris. These experiences let me explore different subjects while learning in unfamiliar environments. One memorable moment in Italy happened when my phone died while I was in an unfamiliar location. I had to explain where I wanted to go and what problem I was having to a restaurant owner who did not speak English.</p>
-        <div class="competency-callout"><strong>Competency connections:</strong> Communication; Global / Cultural Awareness; Lifelong Learning.<br><span class="note">Studying and navigating unfamiliar environments encouraged me to adapt my communication and learn from different perspectives.</span></div>
+        <div class="competency-callout">
+          <strong>Competency connections:</strong> Communication; Global / Cultural Awareness; Lifelong Learning.
+          <br><span class="note">Studying and navigating unfamiliar environments encouraged me to adapt my communication and learn from different perspectives.</span>
+        </div>
       </div>
     </article>
 
@@ -181,7 +201,10 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
       </div>
       <div>
         <p>I worked with a team of five to design, build, and validate a multifunctional robotic system. My responsibilities included leading manufacturing and fabrication, performing calculations involving torque, gear ratios, and drivetrain performance, and developing a complete CAD model and engineering drawings in SolidWorks. One of the most challenging parts of the project was coordinating with my teammates and communicating the reasoning behind our design choices. The experience showed me that successful engineering requires both technical knowledge and the ability to work collaboratively.</p>
-        <div class="competency-callout"><strong>Competency connections:</strong> Teamwork; Communication; Systems Thinking; Creativity.<br><span class="note">The project required coordination, clear explanations of design choices, and attention to how components performed as part of a larger system.</span></div>
+        <div class="competency-callout">
+          <strong>Competency connections:</strong> Teamwork; Communication; Systems Thinking; Creativity.
+          <br><span class="note">The project required coordination, clear explanations of design choices, and attention to how components performed as part of a larger system.</span>
+        </div>
       </div>
     </article>
   </div>
@@ -195,7 +218,9 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
   <h3>Competency development</h3>
   <div class="table-wrap">
     <table>
-      <thead><tr><th>Competency</th><th>Current proficiency</th><th>Evidence / reflection</th><th>Next step</th></tr></thead>
+      <thead>
+        <tr><th>Competency</th><th>Current proficiency</th><th>Evidence / reflection</th><th>Next step</th></tr>
+      </thead>
       <tbody>
         <tr><td>Communication</td><td><span class="rating">Proficient</span></td><td>RPM project: explaining design choices and coordinating with teammates.</td><td>Practice explaining technical ideas clearly to different audiences.</td></tr>
         <tr><td>Creativity</td><td><span class="rating">Proficient</span></td><td>Designing and improving a multifunctional robotic system.</td><td>Explore and compare multiple design solutions before selecting one.</td></tr>
@@ -212,7 +237,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
       </tbody>
     </table>
   </div>
-    <hr>
+
+  <hr>
   <h3>SMART goals</h3>
   <div class="goals">
     <article class="goal">
@@ -232,26 +258,21 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 34px 0; }
     <h3>Staying open while finding direction</h3>
     <p>At this point in my Mechanical Engineering degree, I am still exploring which area of engineering I want to pursue in the future. I want to use my remaining time at the University of Michigan to learn about different research opportunities and gain a clearer understanding of the career paths available to me. I am also interested in exploring my Mathematics minor further because I enjoy both understanding the ideas behind mathematical concepts and seeing how they can be applied to real-world problems. Through my coursework, project teams, and potential research experiences, I hope to discover which subjects interest me most and how I can combine my interests in mathematics and engineering. My goal is to remain open to different opportunities while continuing to challenge myself academically and maintain a semester GPA above 3.85.</p>
   </div>
+
   <hr>
-  
-<div id="focus-area">
-  <h3>Honors Focus Area &amp; Capstone Reflection</h3>
-  <p>
-    Explore my reflection on engineering operations, the Tauber Institute,
-    capstone interests, and future goals.
-  </p>
-  <a href="honors-focus-area-capstone-reflection.pdf"
-     target="_blank"
-     rel="noopener noreferrer">
-    View my reflection (PDF) →
-  </a>
-</div>
+  <div id="focus-area">
+    <h3>Honors Focus Area &amp; Capstone Reflection</h3>
+    <p>Explore my reflection on engineering operations, the Tauber Institute, capstone interests, and future goals.</p>
+    <a href="honors-focus-area-capstone-reflection.pdf" target="_blank" rel="noopener noreferrer">
+      View my reflection (PDF) →
+    </a>
+  </div>
 </section>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div><strong> Dilara Nevin Arican </strong><br>University of Michigan · Engineering Honors Portfolio</div>
+    <div><strong>Dilara Nevin Arican</strong><br>University of Michigan · Engineering Honors Portfolio</div>
     <div><a href="https://www.linkedin.com/in/dilara-nevin-arican" target="_blank" rel="noopener noreferrer">LinkedIn profile</a></div>
   </div>
 </footer>
